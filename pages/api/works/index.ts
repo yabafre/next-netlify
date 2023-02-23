@@ -38,7 +38,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
                 throw new Error("Error Create")
             }
 
-            return res.status(201).json({ message: `Le projet ${workCreate.title} a bien été créé`})
+            return res.status(201).json({ message: `Le projet ${workCreate.title} a bien été créé dans le portfolio`})
 
 
         } catch(error){
