@@ -1,0 +1,56 @@
+h1 {
+  font-size: 6rem;
+  line-height: 6rem;
+  letter-spacing: -0.01562em;
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 3.75rem;
+  line-height: 3.75rem;
+  letter-spacing: -0.00833em;
+  font-weight: 300;
+}
+
+h3 {
+  font-size: 3rem;
+  line-height: 3.125rem;
+  letter-spacing: normal;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: 2.125rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.00735em;
+  font-weight: 400;
+}
+
+h5 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  letter-spacing: normal;
+  font-weight: 400;
+}
+
+h6 {
+  font-size: 1.25rem;
+  line-height: 2rem;
+  letter-spacing: 0.0125em;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Satoshi-Regular";
+  src: url("fonts/Satoshi-Regular.otf") format("opentype");
+}
+body {
+  background: #0C0C0D;
+  color: #fff;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*# sourceMappingURL=globals.css.map */
