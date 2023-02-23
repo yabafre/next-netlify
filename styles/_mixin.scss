@@ -1,0 +1,12 @@
+@mixin flexMid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin addParm($element, $value, $element2, $value2, $element3, $value3, $element4, $value4) {
+  #{$element}: $value;
+  #{$element2}: $value2;
+  #{$element3}: $value3;
+  #{$element4}: $value4;
+}

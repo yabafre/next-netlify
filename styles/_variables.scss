@@ -1,0 +1,91 @@
+
+// color primary
+$_white     : #fff !default;
+$_dark      : #0C0C0D !default;
+$_primary   : #1976D2 !default;
+$_secondary : #26A69A !default;
+$_accent    : #9C27B0 !default;
+$positive   : #21BA45 !default;
+$negative   : #C10015 !default;
+$info       : #31CCEC !default;
+$warning    : #F2C037 !default;
+
+h1{    @include addParm(font-size, 6rem, line-height, 6rem, letter-spacing, -.01562em, font-weight, 300);}
+h2{    @include addParm(font-size, 3.75rem,  line-height, 3.75rem,  letter-spacing, -.00833em, font-weight, 300);}
+h3{    @include addParm(font-size, 3rem,     line-height, 3.125rem, letter-spacing, normal,    font-weight, 400);}
+h4{    @include addParm(font-size, 2.125rem, line-height, 2.5rem,   letter-spacing, .00735em,  font-weight, 400);}
+h5{    @include addParm(font-size, 1.5rem,   line-height, 2rem,     letter-spacing, normal,    font-weight, 400);}
+h6{    @include addParm(font-size, 1.25rem,  line-height, 2rem,     letter-spacing, .0125em,   font-weight, 500);}
+
+$space-base   : 15px !default;
+$space-x-base : $space-base !default;
+$space-y-base : $space-base !default;
+
+$space-none : (x: 0, y: 0) !default;
+$space-xs   : (x: ($space-x-base * .25), y: ($space-y-base * .25)) !default;
+$space-sm   : (x: ($space-x-base * .5), y: ($space-y-base * .5)) !default;
+$space-md   : (x: $space-x-base, y: $space-y-base) !default;
+$space-lg   : (x: ($space-x-base * 1.5), y: ($space-y-base * 1.5)) !default;
+$space-xl   : (x: ($space-x-base * 3), y: ($space-y-base * 3)) !default;
+
+$animate-delay    : .3s !default;
+$animate-duration : .3s !default;
+$animate-repeat   : 1 !default;
+
+// Max width at which point
+$breakpoint-xs: 599px !default;
+$breakpoint-sm: 1023px !default;
+$breakpoint-md: 1439px !default;
+$breakpoint-lg: 1919px !default;
+
+$sizes: ('xs': 0, 'sm': ($breakpoint-xs + 1), 'md': ($breakpoint-sm + 1), 'lg': ($breakpoint-md + 1), 'xl': ($breakpoint-lg + 1)) !default;
+
+
+$body-font-size   : 14px !default;
+$body-line-height : 1.5 !default;
+
+$breakpoint-xs-max: (map-get($sizes, "sm") - 0.02) !default;
+
+$breakpoint-sm-min: map-get($sizes, "sm") !default;
+$breakpoint-sm-max: (map-get($sizes, "md") - 0.02) !default;
+
+$breakpoint-md-min: map-get($sizes, "md") !default;
+$breakpoint-md-max: (map-get($sizes, "lg") - 0.02) !default;
+
+$breakpoint-lg-min: map-get($sizes, "lg") !default;
+$breakpoint-lg-max: (map-get($sizes, "xl") - 0.02) !default;
+
+$breakpoint-xl-min: map-get($sizes, "xl") !default;
+
+
+@font-face {
+  font-family: 'Satoshi-Regular';
+  src: url('fonts/Satoshi-Regular.otf') format('opentype');
+}
+
+$generic-border-radius          : 4px !default;
+$generic-hover-transition       : .3s cubic-bezier(.25, .8, .5, 1) !default;
+$typography-font-family         : 'Satoshi-Regular', '-apple-system', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$min-line-height                : 1.12 !default;
+
+$button-border-radius           : 3px !default;
+$button-padding                 : 4px 16px !default;
+$button-dense-padding           : .285em !default;
+$button-font-size               : 14px !default;
+$button-line-height             : 1.715em !default;
+$button-font-weight             : 500 !default;
+$button-rounded-border-radius   : 28px !default;
+$button-push-border-radius      : 7px !default;
+
+
+$input-size-height              : 48px !default;
+$input-font-size                : 14px !default;
+$input-text-color               : rgba(0,0,0,.87) !default;
+$input-label-color              : rgba(0,0,0,.6) !default;
+$input-autofill-color           : inherit !default;
+
+$img-loading-font-size          : 50px !default;
+$img-content-position           : absolute !default;
+$img-content-padding            : 16px !default;
+$img-content-color              : #fff !default;
+$img-content-background         : rgba(0, 0, 0, .47) !default;
