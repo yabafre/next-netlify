@@ -46,6 +46,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
             var message = `Une erreur c'est produite, veuillez réessayer!`
             var code = 500
 
+            // @ts-ignore
             if(error.message == "Error Work"){
                 message = `Ce projet n'existe pas !`
                 code = 409
@@ -95,16 +96,18 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
             var message = `Une erreur c'est produite, veuillez réessayer!`
             var code = 500
 
+            // @ts-ignore
             if(error.message == "foundWork"){
                 message = `Ce projet n'existe pas !`
                 code = 409
             }
 
+            // @ts-ignore
             if(error.message == "Error Champs"){
                 message = `Vous devez remplir tous les champs !`
                 code = 409
             }
-
+            // @ts-ignore
             if(error.message == "Update Work"){
                 message = `Le projet n'as pas pu être modifier, veuillez réessayer !`
                 code = 409
@@ -145,11 +148,12 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
             var message = `Une erreur c'est produite, veuillez réessayer!`
             var code = 500
 
+            // @ts-ignore
             if(error.message == "foundWork"){
                 message = `Ce projet n'existe pas !`
                 code = 409
             }
-
+            // @ts-ignore
             if(error.message == "worksDelete"){
                 message = `Le projet n'as pas pu être supprimer, veuillez réessayer !`
                 code = 409
