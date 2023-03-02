@@ -1,9 +1,10 @@
 import { FC } from 'react';
+import Link from "next/link";
 
 const Acceuil: FC = () => {
     return (
         <>
-
+            <Link href={`/admin`}>List Project</Link>
         </>
     )
 }
