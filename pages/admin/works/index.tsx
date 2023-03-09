@@ -29,7 +29,7 @@ export default function Works({ work }: Props){
     }, [])
 
     const deleteWork = async(id: string) => {
-        fetch(`/api/works/${id}`)
+        fetch(`/api/works/${id}`, { method: "DELETE" })
             .then(response => response.json())
             .then((json) => {
 
@@ -60,7 +60,7 @@ export default function Works({ work }: Props){
                 <section className="w-full px-[5vw] pb-[5vw]">
                     <div className="w-full box-border grid grid-cols-3 gap-[20px]">
                         {works.map((work) => (
-                            <div className="card">
+                            <div key={work._id} className="card">
                                 <Link href={`/admin/works/${work._id}`}>
                                     <div className="w-full p-5 text-white bg-black/50">
                                         <h2 className="font-semibold text-lg mb-2.5">{work.title}</h2>

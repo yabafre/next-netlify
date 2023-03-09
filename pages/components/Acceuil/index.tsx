@@ -4,7 +4,7 @@ import Link from "next/link";
 const Acceuil: FC = () => {
     return (
         <>
-            <Link href={`/admin`}>List Project</Link>
+            <Link href={`/admin/works`}>List Project</Link>
         </>
     )
 }
