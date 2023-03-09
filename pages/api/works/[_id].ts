@@ -21,7 +21,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     const { title, seo, slug, description, coverImage } = req.body
 
     const{
-        query: { id },
+        query: { _id },
         method,
     } = req
 
@@ -32,7 +32,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 
             dbConnect()
 
-            const works = await WorkModel.findOne({'id': id})
+            const works = await WorkModel.findOne({'_id': _id})
 
             if(!works){
                 throw new Error("Error Work")
@@ -67,7 +67,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
             // Connexion à la base de donnée
             dbConnect()
 
-            const foundWork = await WorkModel.findOne({'id': id})
+            const foundWork = await WorkModel.findOne({'_id': _id})
 
             if(!foundWork){
                 throw new Error('foundWork')
@@ -82,7 +82,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
             }
 
 
-            const updateWork = await WorkModel.updateOne({'id': id}, { $set : { title: title, seo: {title: seo.title, description: seo.description}, slug: slug, description: description, coverImage: coverImage}})
+            const updateWork = await WorkModel.updateOne({'_id': _id}, { $set : { title: title, seo: {title: seo.title, description: seo.description}, slug: slug, description: description, coverImage: coverImage}})
 
             if(!updateWork){
                 throw new Error('Update Work')
@@ -128,13 +128,13 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 
             dbConnect()
 
-            const foundWork = await WorkModel.findOne({'id': id})
+            const foundWork = await WorkModel.findOne({'_id': _id})
 
             if(!foundWork){
                 throw new Error('foundWork')
             }
 
-            const worksDelete = await WorkModel.deleteOne({'id': id})
+            const worksDelete = await WorkModel.deleteOne({'_id': _id})
 
             if(!worksDelete){
                 throw new Error('worksDelete')

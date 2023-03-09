@@ -22,7 +22,6 @@ export default function CreateWork(){
         fetch(`/api/works/${_id}`, { method: "GET"})
             .then(response => response.json())
             .then((json) => {
-
                 setWorkEdit(json.works)
                 setIsLoading(false)
             })
