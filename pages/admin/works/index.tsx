@@ -3,6 +3,7 @@ import { IWork } from '@/@types/work'
 import { NextPage } from "next"
 import Link from "next/link"
 import { useEffect, useState } from 'react'
+import { CldImage } from 'next-cloudinary';
 
 
 
@@ -65,6 +66,9 @@ export default function Works({ work }: Props){
                                     <div className="w-full p-5 text-white bg-black/50">
                                         <h2 className="font-semibold text-lg mb-2.5">{work.title}</h2>
                                         <p className="text-sm">{work.description}</p>
+                                    </div>
+                                    <div className="w-full h-[200px]">
+                                        <CldImage width={200} height={200} src={work.coverImage} alt={work.title} />
                                     </div>
                                 </Link>
                                 <div>

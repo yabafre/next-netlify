@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import Link from "next/link"
 import { redirect } from 'next/navigation';
+import process from "process";
+import {CldUploadWidget} from "next-cloudinary";
 
 export default function CreateWork(){
     const router = useRouter()
@@ -108,11 +110,30 @@ export default function CreateWork(){
                         <input type="text" id="title" name="title" placeholder="Titre du projet" value={workEdit.title} onChange={handleChange} className="border-b-2 border-black mb-[20px] w-[50%] py-[10px] px-[20px]" />
                         <input type="text" id="seo.title"  placeholder="Titre seo du projet" value={workEdit.seo.title} onChange={handleChange} className="border-b-2 border-black mb-[20px] w-[50%] py-[10px] px-[20px]"  />
                         <textarea id="seo.description" placeholder="Description seo du projet" value={workEdit.seo.description} onChange={handleChange} className="border-b-2 border-black mb-[20px] w-[50%] h-fit py-[10px] px-[20px]" maxLength="160"></textarea>
-
                         <input type="text" id="slug" name="slug" placeholder="Slug du projet" value={workEdit.slug} onChange={handleChange} className="border-b-2 border-black mb-[20px] w-[50%] py-[10px] px-[20px]"  />
-                        <input type="text" id="coverImage" name="coverImage" placeholder="Image du projet" value={workEdit.coverImage} onChange={handleChange}  className="border-b-2 border-black mb-[20px] w-[50%] py-[10px] px-[20px]" />
+                        <input type="hidden" id="coverImage" name="coverImage" placeholder="Image du projet" value={workEdit.coverImage} onChange={handleChange}  className="border-b-2 border-black mb-[20px] w-[50%] py-[10px] px-[20px]" />
+                        <CldUploadWidget uploadPreset={process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET}
+                                         onUpload={(res: { info: { secure_url: any; }; }) => {
+                                             console.log('res : ',res.info)
+                                                setWorkEdit((prev) => ({
+                                                    ...prev,
+                                                    coverImage: res.info.public_id,
+                                                }
+                                                ))
+                                         }}>
+                            {({ open }) => {
+                                function handleOnClick(e: { preventDefault: () => void; }) {
+                                    e.preventDefault();
+                                    open();
+                                }
+                                return (
+                                    <button className="btn text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight " onClick={handleOnClick}>
+                                        Upload an Image
+                                    </button>
+                                );
+                            }}
+                        </CldUploadWidget>
                         <textarea name="description" id="description" placeholder="Description du projet" value={workEdit.description} onChange={handleChange} className="border-b-2 border-black mb-[50px] w-[50%] py-[10px] px-[20px]" ></textarea>
-
                         <button type="submit" className=" mb-[20px] w-fit h-fit py-[10px] px-[20px] bg-black text-white" >Envoyer</button>
                     </form>
 

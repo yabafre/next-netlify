@@ -1,4 +1,5 @@
 export interface IWork{
+    coverImage: string;
     description: string;
     _id: string,
     title: string,
