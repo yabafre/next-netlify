@@ -77,9 +77,9 @@ export default function CreateWork(){
                     <CldUploadWidget uploadPreset={process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET}
                                      onUpload={(res: { info: { secure_url: any; }; }) => {
                                          console.log('res : ',res.info)
+                                         // @ts-ignore
                                          setWorkCreate((prev) =>
                                              ({ ...prev, coverImage: res.info.public_id })) }
-
                                      }>
                         {({ open }) => {
                             function handleOnClick(e: { preventDefault: () => void; }) {
@@ -96,7 +96,6 @@ export default function CreateWork(){
                     <textarea name="description" id="description" placeholder="Description du projet" value={workCreate.description} onChange={handleChange} className="border-b-2 border-black mb-[20px] w-[50%] py-[10px] px-[20px]"></textarea>
                     <button type="submit" className=" mb-[20px] w-fit h-fit py-[10px] px-[20px] bg-black text-white">Envoyer</button>
                 </form>
-
             </section>
         </>
     )

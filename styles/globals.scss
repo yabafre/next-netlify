@@ -1,6 +1,10 @@
-@import "mixin";
+@import "supreme";
+@import "other_fonts";
 @import "variables";
-@import "home";
+@import "animations";
+@import "main";
+@import "skills";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

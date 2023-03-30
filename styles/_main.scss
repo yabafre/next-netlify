@@ -1,0 +1,120 @@
+// *** Main Stylesheet ***
+body {
+  background-color: $black;
+  color: $white;
+  padding: 0 $padding-xm;
+  font-family: $font-family;
+  cursor : crosshair;
+  min-height: 100vh;
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+}
+.visible-scrollbar, .invisible-scrollbar, .mostly-customized-scrollbar {
+  display: block;
+  width: 10em;
+  overflow: auto;
+  height: 2em;
+}
+.invisible-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.mostly-customized-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+}
+.mostly-customized-scrollbar::-webkit-scrollbar-thumb {
+  background: $princeton-orange;
+}
+a{
+  color: $white;
+  text-decoration: none;
+  transition: 0.4s;
+  &:hover{
+    text-decoration: underline;
+  }
+}
+header{
+  padding: 2rem 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  @include font-title;
+}
+main{
+    height: 80vh;
+}
+
+.text__intro{
+    width: 100%;
+    text-align: left;
+    display: flex;
+    font-size: 10vw !important;
+    flex-direction: column;
+    transition: transform .85s $transition-ease,text-shadow .35s $transition-ease,color .35s $transition-ease;
+    .text__into__title{
+        span{
+            position: relative;
+            display: inline-block;
+            top: -5px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+            transition: $transition-ease transform calc((var(--order) / 2 * .5s) + .5s), $transition-ease top calc((var(--order) / 2 * .5s) + .5s);
+            transition-delay: .1s;
+            &:hover{
+                color: $night;
+                margin: 5px;
+                text-shadow: -1px 0 $white,0 1px $white,1px 0 $white,0 -1px $white;
+                transform: scale(1.2);
+                &::before{
+                    position: absolute;
+                    display: block;
+                    content: "";
+                    width: calc(50px / 2);
+                    height: calc(50px / 2);
+                    top: -0.165em;
+                    left: 2px;
+                    border-top: 1pt solid $white;
+                    border-left: 1pt solid $white;
+                }
+            }
+        }
+    }
+}
+
+.text__head__loop {
+  position: absolute;
+  z-index: -999999;
+  top: 18%;
+  width: 200vw;
+  color: $princeton-orange;
+  filter: blur(74px);
+  overflow: hidden;
+  font-size: $font-size-xxl;
+  white-space: nowrap;
+  animation: marquee 24s linear infinite;
+
+  .text__head__loop{
+    mix-blend-mode: plus-lighter;
+  }
+}
+
+.text__head__loop::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 50%;
+  height: 100%;
+  box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.5);
+}
+
+.contain-cards{
+  overflow-y: scroll;
+  height: 74vh;
+  padding: 22px 0;
+}
+
+

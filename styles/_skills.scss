@@ -1,0 +1,255 @@
+// main cursor snipper
+.snipper {
+  position: fixed;
+  opacity: 1;
+  text-transform: none!important;
+  left: -2.5px;
+  top: -2.5px;
+  pointer-events: none;
+  z-index: 1000!important;
+  width: 5px;
+  height: 5px;
+  border-radius: 500px;
+  transition: width .35s,height .35s,top .35s,left .35s,transform .1s $transition-ease,backdrop-filter .3s $transition-ease,-webkit-backdrop-filter .3s $transition-ease;
+  & div{
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    transition: $transition-ease .35s;
+    transition-delay: .3s;
+  }
+  .snipper__coint_1{
+    top: -10px;
+    right: -10px;
+    border-top: 1pt solid $color-border-base;
+    border-right: 1pt solid $color-border-base;
+  }
+  .snipper__coint_2{
+    top: -10px;
+    left: -10px;
+    border-top: 1pt solid $color-border-base;
+    border-left: 1pt solid $color-border-base;
+  }
+  .snipper__coint_3{
+    right: -10px;
+    bottom: -10px;
+    border-bottom: 1pt solid $color-border-base;
+    border-right: 1pt solid $color-border-base;
+  }
+  .snipper__coint_4{
+    bottom: -10px;
+    left: -10px;
+    border-bottom: 1pt solid $color-border-base;
+    border-left: 1pt solid $color-border-base;
+  }
+  .snipper__plus{
+    pointer-events: none;
+    transform: translate(-25px,-35px);
+  }
+}
+.snipper.snipper--hover{
+  .snipper__coint_1{
+    top: -10px;
+    right: -10px;
+    border-top: 1pt solid $princeton-orange;
+    border-right: 1pt solid $princeton-orange;
+  }
+  .snipper__coint_2{
+    top: -10px;
+    left: -10px;
+    border-top: 1pt solid $princeton-orange;
+    border-left: 1pt solid $princeton-orange;
+  }
+  .snipper__coint_3{
+    right: -10px;
+    bottom: -10px;
+    border-bottom: 1pt solid $princeton-orange;
+    border-right: 1pt solid $princeton-orange;
+  }
+  .snipper__coint_4{
+    bottom: -10px;
+    left: -10px;
+    border-bottom: 1pt solid $princeton-orange;
+    border-left: 1pt solid $princeton-orange;
+  }
+}
+.snipper--pointer--zoom{
+  width: 75px;
+  height: 75px;
+  left: -37.5px;
+  top: -37.5px;
+  background: transparent;
+  backdrop-filter: invert(90%) blur(2px);
+  transition: width .35s,height .35s,top .35s,left .35s,transform .1s $transition-ease,backdrop-filter .3s $transition-ease,-webkit-backdrop-filter .3s $transition-ease;
+}
+.snipper--pointer{
+  width: 75px;
+  height: 75px;
+  left: -37.5px;
+  top: -37.5px;
+  background: none;
+  transition: width .35s,height .35s,top .35s,left .35s,transform .1s $transition-ease,backdrop-filter .3s $transition-ease,-webkit-backdrop-filter .3s $transition-ease;
+}
+//button triangle
+.button__triangle {
+  position: absolute;
+  display: flex;
+  width: 100px;
+  height: 100px;
+  left: 68%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: rotate 1.5s infinite linear;
+  transform-origin: center;
+  span{
+    position: relative;
+    display: block;
+    animation: pulse 2s ease-in-out infinite;
+  }
+  .coin__side-1 {
+    top: 21px;
+    left: -28px;
+    width: 50px;
+    height: 43.3px;
+    transform: rotate(120deg);
+    border-top: 1px solid $white;
+    transition: transform 0.3s $transition-ease, opacity 0.3s $transition-ease, top 0.3s $transition-ease, left 0.3s $transition-ease;
+  }
+  .coin__side-2 {
+    top: -14px;
+    left: 25px;
+    width: 50px;
+    height: 43.3px;
+    transform: rotate(240deg);
+    border-top: 1px solid $white;
+    transition: transform 0.3s $transition-ease, opacity 0.3s $transition-ease, top 0.3s $transition-ease, left 0.3s $transition-ease;
+  }
+  .coin__side-3 {
+    bottom: 0.4px;
+    left: 0;
+    width: 50px;
+    height: 43.3px;
+    transform-origin: bottom;
+    border-top: 1px solid $white;
+    transition: transform 0.3s $transition-ease, opacity 0.3s $transition-ease, bottom 0.3s $transition-ease, left 0.3s $transition-ease;
+  }
+  .button__triangle__text {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    color: $white;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  &:hover {
+    animation: none;
+    .coin__side-1 {
+      top: 66px;
+      transform: rotate(0deg);
+      left: -48px;
+    }
+    .coin__side-2 {
+      transform: rotate(360deg);
+      top: 33.1px;
+      left: 48px;
+    }
+    .button__triangle__text {
+      opacity: 1;
+    }
+  }
+}
+// include mixin button
+.btn__go{
+  @include button-base(auto,54px);
+}
+// button switch theme
+.button__form__switch{
+  position: relative;
+  display: flex;
+  max-width: 60px;
+  max-height: 60px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 500px;
+  transition: background .3s $transition-ease, border .3s $transition-ease, color .3s $transition-ease, transform .3s $transition-ease;
+  &:hover{
+    background: $princeton-orange;
+    border: 1px solid $princeton-orange;
+    box-shadow: 0px 0px 20px 2px $princeton-orange;
+    transform: scale(1.1);
+    color: $white;
+    span{
+      background: none !important;
+      animation: rotate 2.5s infinite linear;
+    }
+  }
+  span{
+    display: none;
+    background: none;
+    height: 18px;
+    border-radius: 500px;
+    transition: background .3s $transition-ease;
+  }
+  .switch__moon.active{
+    display: block;
+    background: $black;
+  }
+}
+.button__form__switch.sun{
+  background: none !important;
+  &:hover{
+    background: $princeton-orange;
+    border: 1px solid $princeton-orange;
+    color: $white;
+    span{
+      background: $princeton-orange !important;
+    }
+    .switch__sun.active{
+      display: block;
+      background: $white;
+      ion-icon {
+        color: $black;
+      }
+    }
+  }
+  .switch__sun.active{
+    display: block;
+    background: $black;
+    ion-icon {
+      color: $white;
+    }
+  }
+}
+// form search with mixin styleCoin
+@include styleCoin( 70px, input, horizontal );
+.form__search__input{
+  width: 500px;
+  .form__search__input__text{
+    @include form-input-text-base;
+  }
+}
+// form weather widget with mixin styleCoin
+.skills-weather{
+  .icon__loop{
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: $princeton-orange;
+    animation: change-background 1s infinite;
+
+  }
+  .form__weather-widget{
+    @include styleCoin(100px, auther, horizontal );
+  }
+}
+// form card works with mixin styleCoin
+.form__card__works{
+  @include styleCoin( 100px, input, horizontal );
+  .form__card__works__text{
+    @include form-input-text-base;
+    background-color: transparent !important;
+  }
+}
+

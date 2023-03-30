@@ -1,12 +1,213 @@
-@mixin flexMid {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+// Function to switch theme
+@function switch-theme($theme: moon){
+    @if($theme == moon){
+        $white: #fff;
+        $black: #0B0B0B;
+    } @else if($theme == sun){
+        $white: #0B0B0B;
+        $black: #fff;
+    }
+    @return $white, $black;
 }
+// mixin for flexmid
+@mixin flexMid {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+// mixin for global parameters 5
+@mixin addParm($element, $value, $element2, $value2, $element3, $value3, $element4, $value4, $element5, $value5) {
+    #{$element}: $value;
+    #{$element2}: $value2;
+    #{$element3}: $value3;
+    #{$element4}: $value4;
+    #{$element5}: $value5;
+}
+// mixin for media query
+@mixin media($breakpoint) {
+    @if $breakpoint == phone {
+        @media (max-width: 767px) {
+            @content;
+        }
+    }
+    @else if $breakpoint == tablet {
+        @media (min-width: 768px) and (max-width: 991px) {
+            @content;
+        }
+    }
+    @else if $breakpoint == desktop {
+        @media (min-width: 992px) and (max-width: 1199px) {
+            @content;
+        }
+    }
+    @else if $breakpoint == large {
+        @media (min-width: 1200px) {
+            @content;
+        }
+    }
+}
+// mixin for animation keyframes
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name} {
+        @content;
+    }
+    @keyframes #{$name} {
+        @content;
+    }
+}
+// mixin for font button
+@mixin font-button {
+    font-family: $font-family-Bold;
+    font-size: $font-size-base;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+// mixin font base
+@mixin font-base {
+    font-family: $font-family;
+    font-size: $font-size-base;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+// mixin for font title
+@mixin font-title {
+    font-family: $font-secondary;
+    font-size: $font-size-base;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+// mixin for orientation flex-direction
+@mixin orientation($orientation, $type: auther) {
+    @if $orientation == horizontal {
+        @if $type == input {
+            flex-direction: row;
+        }
+        @else if $type == auther {
+            flex-direction: column;
+        }
+    }
+    @else if $orientation == vertical {
+        @if $type == input {
+            flex-direction: column;
+        }
+        @else if $type == auther {
+            flex-direction: row;
+        }
+    }
 
-@mixin addParm($element, $value, $element2, $value2, $element3, $value3, $element4, $value4) {
-  #{$element}: $value;
-  #{$element2}: $value2;
-  #{$element3}: $value3;
-  #{$element4}: $value4;
+}
+// mixin for orientation width and height by size
+@mixin size($size, $orientation, $type: auther) {
+    @if $orientation == horizontal {
+        @if $type == input {
+            width: max-content;
+        }
+        @else if $type == auther {
+            height: $size;
+        }
+    }
+    @else if $orientation == vertical {
+        width: $size;
+    }
+}
+// mixin for padding by orientation and size
+@mixin padding($orientation, $size) {
+    @if $orientation == horizontal {
+        padding: ($size * .255);
+    }
+    @else if $orientation == vertical {
+        padding: $size + 15px 0 ($size + 25px);
+    }
+}
+// mixin for style coint__item
+@mixin styleCoin($size, $type: auther, $orientation: horizontal, $position: relative) {
+    .parent-contain {
+        @include size($size, $orientation, $type);
+        display: flex;
+        @include orientation($orientation, $type);
+        justify-content: center;
+        gap: 5px;
+        position: $position;
+        color: $white;
+        align-items: center;
+        //transform: translateY(-50%);
+        padding: 15px;
+        background-color: transparent;
+        transition: 1.25s right $transition-ease, 1.25s padding $transition-ease, 1.25s gap $transition-ease;
+
+        span {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            transition: $transition-ease .35s;
+            transition-delay: .3s;
+        }
+
+        .coint-1 {
+            top: 0;
+            right: 0;
+            border-top: 1pt solid $color-border-base;
+            border-right: 1pt solid $color-border-base;
+        }
+
+        .coint-2 {
+            left: 0;
+            top: 0;
+            border-top: 1pt solid $color-border-base;
+            border-left: 1pt solid $color-border-base;
+        }
+
+        .coint-3 {
+            right: 0;
+            bottom: 0;
+            border-bottom: 1pt solid $color-border-base;
+            border-right: 1pt solid $color-border-base;
+        }
+
+        .coint-4 {
+            bottom: 0;
+            left: 0;
+            border-bottom: 1pt solid $color-border-base;
+            border-left: 1pt solid $color-border-base;
+        }
+
+        &:hover {
+            @include padding($orientation, $size);
+            gap: 15px;
+            span {
+                width: 12px;
+                height: 12px;
+                transition: $transition-ease .35s;
+                transition-delay: 0s;
+            }
+        }
+    }
+}
+// mixin for form input text base
+@mixin form-input-text-base {
+    @include font-base;
+    background-color: $black;
+    color: $white;
+    border: none;
+    outline: none;
+    width: 100%;
+    border-radius: $border-radius;
+    transition: transform 0.2s $transition-ease;
+}
+// mixin for button base
+@mixin button-base ($size-x, $size-y) {
+    background-color: $black;
+    @include font-button;
+    color: $white;
+    border: none;
+    padding: 10px 20px;
+    width: $size-x;
+    height: $size-y;
+    border-radius: $border-radius;
+    transition: transform 0.2s $transition-ease;
+    &:hover {
+        background-color: $princeton-orange;
+        transform: scale(1.1) translateY(-5px) translateX(-5px) rotate(5deg);
+    }
 }
