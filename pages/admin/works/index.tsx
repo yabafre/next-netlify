@@ -70,7 +70,7 @@ export default function Works({ work }: Props){
                         <span className="text__head">Fullstack Développer! </span>
                         <span className="text__head">Fullstack Développer! </span>
                     </div>
-                    <div className="w-full box-border grid grid-cols-2 h-[73vh]">
+                    <div className="w-full box-border grid lg:grid-cols-2 h-[73vh] sm:grid-cols-1">
                         <div className="w-full h-full flex flex-col justify-center items-center">
                             <h1 className="text-4xl mb-2.5">Mes travaux</h1>
                         </div>
@@ -92,7 +92,7 @@ export default function Works({ work }: Props){
                                     </div>
                                     {session?(
                                         <><div>
-                                            <Link href={`/admin/works/${work._id}/edit`}>Modifier</Link>
+                                            <Link href={`/admin/works/update/${work._id}`}>Modifier</Link>
                                             <button onClick={() => deleteWork(work._id)}>Supprimer</button>
                                         </div>
                                         </>

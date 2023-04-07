@@ -93,7 +93,7 @@ export default function CreateWork(){
         // @ts-ignore
         return (
             <>
-                <header className="w-full px-[5vw] pt-[15vw] flex justify-between items-end mb-[5vw] ">
+                <header className="w-full px-[5vw] flex justify-between items-end ">
                     <h1 className="text-7xl font-semibold uppercase w-fit">Modification d'un projet</h1>
                     <span className='flex '>
                     <Link href="/admin/works"  className="btn-admin"><ion-icon name="list-outline"></ion-icon></Link>
@@ -106,35 +106,51 @@ export default function CreateWork(){
 
                 <section className="w-full px-[5vw] pb-[5vw]">
 
-                    <form onSubmit={handleSubmit} className="flex flex-col pl-[50px]">
-                        <input type="text" id="title" name="title" placeholder="Titre du projet" value={workEdit.title} onChange={handleChange} className="border-b-2 border-black mb-[20px] w-[50%] py-[10px] px-[20px]" />
-                        <input type="text" id="seo.title"  placeholder="Titre seo du projet" value={workEdit.seo.title} onChange={handleChange} className="border-b-2 border-black mb-[20px] w-[50%] py-[10px] px-[20px]"  />
-                        <textarea id="seo.description" placeholder="Description seo du projet" value={workEdit.seo.description} onChange={handleChange} className="border-b-2 border-black mb-[20px] w-[50%] h-fit py-[10px] px-[20px]" maxLength="160"></textarea>
-                        <input type="text" id="slug" name="slug" placeholder="Slug du projet" value={workEdit.slug} onChange={handleChange} className="border-b-2 border-black mb-[20px] w-[50%] py-[10px] px-[20px]"  />
-                        <input type="hidden" id="coverImage" name="coverImage" placeholder="Image du projet" value={workEdit.coverImage} onChange={handleChange}  className="border-b-2 border-black mb-[20px] w-[50%] py-[10px] px-[20px]" />
-                        <CldUploadWidget uploadPreset={process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET}
-                                         onUpload={(res: { info: { secure_url: any; }; }) => {
-                                             console.log('res : ',res.info)
-                                                setWorkEdit((prev) => ({
-                                                    ...prev,
-                                                    coverImage: res.info.public_id,
-                                                }
-                                                ))
-                                         }}>
-                            {({ open }) => {
-                                function handleOnClick(e: { preventDefault: () => void; }) {
-                                    e.preventDefault();
-                                    open();
-                                }
-                                return (
-                                    <button className="btn text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight " onClick={handleOnClick}>
-                                        Upload an Image
-                                    </button>
-                                );
-                            }}
-                        </CldUploadWidget>
-                        <textarea name="description" id="description" placeholder="Description du projet" value={workEdit.description} onChange={handleChange} className="border-b-2 border-black mb-[50px] w-[50%] py-[10px] px-[20px]" ></textarea>
-                        <button type="submit" className=" mb-[20px] w-fit h-fit py-[10px] px-[20px] bg-black text-white" >Envoyer</button>
+                    <form onSubmit={handleSubmit} className="flex flex-col pl-[50px] text-white ">
+                        <div className="flex items-center border-b border-orange-500 py-2">
+                            <input type="text" id="title" name="title" placeholder="Titre du projet" value={workEdit.title} onChange={handleChange} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white " />
+                        </div>
+                        <div className="flex items-center border-b border-orange-500 py-2">
+                            <textarea id="description" name="description" placeholder="Description du projet" value={workEdit.description} onChange={handleChange} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white " />
+                        </div>
+                        <div className="flex items-center border-b border-orange-500 py-2">
+                            <input type="text" id="seo.title"  placeholder="Titre seo du projet" value={workEdit.seo.title} onChange={handleChange} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white " />
+                        </div>
+                        <div className="flex items-center border-b border-orange-500 py-2">
+                            <textarea id="seo.description" placeholder="Description seo du projet" value={workEdit.seo.description} onChange={handleChange} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white " />
+                        </div>
+                        <div className="flex items-center border-b border-orange-500 py-2">
+                            <input type="text" id="slug" name="slug" placeholder="Slug du projet" value={workEdit.slug} onChange={handleChange} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white " />
+                        </div>
+                        <div className="flex items-center border-b border-orange-500 py-2">
+                            <input type="hidden" id="coverImage" name="coverImage" placeholder="Image du projet" value={workEdit.coverImage} onChange={handleChange} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white " />
+                        </div>
+                        <div className="flex items-center py-2">
+                            <CldUploadWidget uploadPreset={process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET}
+                                             onUpload={(res: { info: { secure_url: any; }; }) => {
+                                                 console.log('res : ',res.info)
+                                                    setWorkEdit((prev) => ({
+                                                        ...prev,
+                                                        coverImage: res.info.public_id,
+                                                    }
+                                                    ))
+                                             }}>
+                                {({ open }) => {
+                                    function handleOnClick(e: { preventDefault: () => void; }) {
+                                        e.preventDefault();
+                                        open();
+                                    }
+                                    return (
+                                        <button className="btn text-white bg-brightRed rounded-[9px] baseline hover:bg-brightRedLight border-2 border-white mt-[15px] mb-[15px] p-[5px] w-[max-content] " onClick={handleOnClick}>
+                                            Upload an Image
+                                        </button>
+                                    );
+                                }}
+                            </CldUploadWidget>
+                        </div>
+                        <div className="flex items-center py-2">
+                            <button type="submit" className=" mb-[20px] w-fit h-fit py-[10px] px-[20px] bg-black text-white" >Envoyer</button>
+                        </div>
                     </form>
 
                 </section>

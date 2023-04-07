@@ -9,7 +9,7 @@ body {
   box-sizing: border-box;
   margin: 0;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 .visible-scrollbar, .invisible-scrollbar, .mostly-customized-scrollbar {
   display: block;
