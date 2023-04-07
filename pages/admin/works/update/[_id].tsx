@@ -36,7 +36,8 @@ export default function CreateWork(){
         if(_id){
             getWork()
         }
-    }, [_id])
+    }, [_id, getWork])
+
 
     const updateWork = async () => {
         fetch(`/api/works/${_id}`, {
@@ -102,7 +103,7 @@ export default function CreateWork(){
                     </span>
                 </header>
 
-                {message && <p id="message">{message}</p>}
+                {message && <p id="message">{message.replace("'", "&apos;")}</p>}
 
                 <section className="w-full px-[5vw] pb-[5vw]">
 
