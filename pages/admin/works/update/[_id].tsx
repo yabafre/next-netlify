@@ -104,7 +104,7 @@ export default function CreateWork(){
                     </span>
                 </header>
 
-                {message && <p id="message">{message}</p>}
+                {message && <p id="message">{message.replace("'", "&apos;")}</p>}
 
                 <section className="w-full px-[5vw] pb-[5vw]">
 
