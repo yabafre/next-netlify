@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, {useCallback, useEffect, useState} from 'react'
 import { useRouter } from 'next/router'
 import Link from "next/link"
 import { redirect } from 'next/navigation';
@@ -20,8 +20,8 @@ export default function CreateWork(){
 
     const [ isLoading, setIsLoading ] = useState(false);
 
-    const getWork = () => {
-        fetch(`/api/works/${_id}`, { method: "GET"})
+    const getWork = useCallback(() => {
+        fetch(`/api/works/${_id}`, { method: "GET" })
             .then(response => response.json())
             .then((json) => {
                 setWorkEdit(json.works)
@@ -30,7 +30,8 @@ export default function CreateWork(){
             .catch((error) => {
                 console.log(error);
             })
-    }
+    }, [_id]);
+
 
     useEffect(() => {
         if(_id){
