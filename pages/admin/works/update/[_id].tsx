@@ -1,7 +1,7 @@
-import React, {useCallback, useEffect, useState} from 'react'
-import { useRouter } from 'next/router'
+import React, {useCallback, useEffect, useState} from "react"
+import { useRouter } from "next/router"
 import Link from "next/link"
-import { redirect } from 'next/navigation';
+import { redirect } from "next/navigation";
 import process from "process";
 import {CldUploadWidget} from "next-cloudinary";
 
@@ -65,14 +65,14 @@ export default function CreateWork(){
         const { id, value } = e.target;
         setWorkEdit((prev) => ({
             ...prev,
-            title: id === 'title' ? value : prev.title,
-            description: id === 'description' ? value : prev.description,
-            slug: id === 'slug' ? value : prev.slug,
-            coverImage: id === 'coverImage' ? value : prev.coverImage,
+            title: id === "title" ? value : prev.title,
+            description: id === "description" ? value : prev.description,
+            slug: id === "slug" ? value : prev.slug,
+            coverImage: id === "coverImage" ? value : prev.coverImage,
             seo: {
                 ...prev.seo,
-                title: id === 'seo.title' ? value : prev.seo.title,
-                description: id === 'seo.description' ? value : prev.seo.description,
+                title: id === "seo.title" ? value : prev.seo.title,
+                description: id === "seo.description" ? value : prev.seo.description,
             },
         }));
     };
@@ -80,7 +80,7 @@ export default function CreateWork(){
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         updateWork().then(r =>
-            router.push('/admin/works'));
+            router.push("/admin/works"));
 
     };
 
@@ -96,15 +96,15 @@ export default function CreateWork(){
         return (
             <>
                 <header className="w-full px-[5vw] flex justify-between items-end ">
-                    <h1 className="text-7xl font-semibold uppercase w-fit">Modification d'un projet</h1>
-                    <span className='flex '>
+                    <h1 className="text-7xl font-semibold uppercase w-fit">Modification d"un projet</h1>
+                    <span className="flex">
                     <Link href="/admin/works"  className="btn-admin"><ion-icon name="list-outline"></ion-icon></Link>
                     <Link href="/admin/works/create"  className="btn-admin"><ion-icon name="add-outline"></ion-icon></Link>
 
                     </span>
                 </header>
 
-                {message && <p id="message">{message.replace("'", "&apos;")}</p>}
+                {message && <p id="message">{message}</p>}
 
                 <section className="w-full px-[5vw] pb-[5vw]">
 
@@ -130,7 +130,7 @@ export default function CreateWork(){
                         <div className="flex items-center py-2">
                             <CldUploadWidget uploadPreset={process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET}
                                              onUpload={(res: { info: { secure_url: any; }; }) => {
-                                                 console.log('res : ',res.info)
+                                                 console.log("res : ",res.info)
                                                     setWorkEdit((prev) => ({
                                                         ...prev,
                                                         coverImage: res.info.public_id,
