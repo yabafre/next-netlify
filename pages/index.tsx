@@ -65,14 +65,14 @@ export default function Home() {
                     <div className="flex flex-col justify-center items-center">
                         <h1 className="text__intro">
                             <span className="text__into__title">
-                              <span className="letter" style={{'--order': 0}} ref={letter1Ref}>W</span>
-                              <span className="letter" style={{'--order': 1}} ref={letter2Ref}>E</span>
-                              <span className="letter" style={{'--order': 2}} ref={letter3Ref}>L</span>
-                              <span className="letter" style={{'--order': 3}} ref={letter4Ref}>C</span>
-                              <span className="letter" style={{'--order': 4}} ref={letter5Ref}>O</span>
-                              <span className="letter" style={{'--order': 5}} ref={letter6Ref}>M</span>
-                              <span className="letter" style={{'--order': 6}} ref={letter7Ref}>E</span>
-                              <span className="letter" style={{'--order': 7}} ref={letter8Ref}>!</span>
+                              <span className="letter" style={{['--order' as any]: 0}} ref={letter1Ref}>W</span>
+                              <span className="letter" style={{['--order' as any]: 1}} ref={letter2Ref}>E</span>
+                              <span className="letter" style={{['--order' as any]: 2}} ref={letter3Ref}>L</span>
+                              <span className="letter" style={{['--order' as any]: 3}} ref={letter4Ref}>C</span>
+                              <span className="letter" style={{['--order' as any]: 4}} ref={letter5Ref}>O</span>
+                              <span className="letter" style={{['--order' as any]: 5}} ref={letter6Ref}>M</span>
+                              <span className="letter" style={{['--order' as any]: 6}} ref={letter7Ref}>E</span>
+                              <span className="letter" style={{['--order' as any]: 7}} ref={letter8Ref}>!</span>
                             </span>
                         </h1>
                     </div>
