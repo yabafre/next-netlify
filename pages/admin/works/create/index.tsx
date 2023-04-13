@@ -62,7 +62,7 @@ export default function CreateWork(){
         <>
             <header className="w-full px-[5vw] pt-[15vw] flex justify-between items-end mb-[5vw]">
                 <h1 className="text-7xl font-semibold uppercase w-fit max-w-[80%]">Création dun projet</h1>
-                <Link href="/admin/works" className="btn-admin"><ion-icon name="list-outline"></ion-icon></Link>
+                <Link href="/admin/works" className="btn-admin">+</Link>
             </header>
 
             {message && <p id="message">{JSON.stringify(message)}</p>}

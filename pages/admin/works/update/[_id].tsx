@@ -98,8 +98,8 @@ export default function CreateWork(){
                 <header className="w-full px-[5vw] flex justify-between items-end ">
                     <h1 className="text-7xl font-semibold uppercase w-fit">Modification d"un projet</h1>
                     <span className="flex">
-                    <Link href="/admin/works"  className="btn-admin"><ion-icon name="list-outline"></ion-icon></Link>
-                    <Link href="/admin/works/create"  className="btn-admin"><ion-icon name="add-outline"></ion-icon></Link>
+                    <Link href="/admin/works"  className="btn-admin">under</Link>
+                    <Link href="/admin/works/create"  className="btn-admin">+</Link>
 
                     </span>
                 </header>
