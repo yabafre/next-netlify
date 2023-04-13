@@ -4,7 +4,7 @@ const Cursor : FC = () => {
 
 useEffect(() => {
     let elementsToWatch = ['.title', '.subtitle', '.about__content', '.letter', '.button__triangle'];
-    let elementsToMouse = ['.footer', '.text__into__jop'];
+    let elementsToMouse = ['.footer', '.text__into__jop', '.btn__return'];
     let elementHovered = '';
 
 

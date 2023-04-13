@@ -647,6 +647,19 @@ main {
   transform: scale(1.1) translateY(-5px) translateX(-5px) rotate(5deg);
 }
 
+.btn__return {
+  background-color: transparent;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+}
+.btn__return:hover {
+  border: 1pt solid var(--primary);
+  background-color: var(--tertiary);
+  transform: scale(1.1) translateY(-5px) translateX(-5px) rotate(5deg);
+}
+
 .button__form__switch {
   position: relative;
   display: flex;

@@ -82,7 +82,7 @@ export default function Works({ work }: Props){
                                     <span className="card__works coint-3"></span>
                                     <span className="card__works coint-4"></span>
                                     <div className="flex flex-row gap-2.5">
-                                        <Link className={'form__card__works__text'} href={`/admin/works/${work._id}`}>
+                                        <Link className={'form__card__works__text'} href={`/project/${work._id}`}>
                                             <h2 className="text-lg mb-2.5">{work.title}</h2>
                                             <p className="text-sm">{work.description}</p>
                                             <div className="w-11/12 h-[200px]">
