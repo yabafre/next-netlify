@@ -75,7 +75,7 @@ export default function CreateWork(){
                     <textarea id="seo.description" placeholder="Description seo du projet" value={workCreate.seo.description} onChange={handleChange} className="border-b-2 border-black mb-[20px] w-[50%] py-[10px] px-[20px]"></textarea>
                     <input type="text" id="slug" name="slug" placeholder="Slug du projet" value={workCreate.slug} onChange={handleChange}  className="border-b-2 border-black mb-[20px] w-[50%] py-[10px] px-[20px]"/>
                     <CldUploadWidget uploadPreset={process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET}
-                                     onUpload={(res: { info: { secure_url: any; }; }) => {
+                                     onUpload={(res: { info: { public_id: any; }; }) => {
                                          console.log('res : ',res.info)
                                          // @ts-ignore
                                          setWorkCreate((prev) =>

@@ -129,7 +129,7 @@ export default function CreateWork(){
                         </div>
                         <div className="flex items-center py-2">
                             <CldUploadWidget uploadPreset={process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET}
-                                             onUpload={(res: { info: { secure_url: any; }; }) => {
+                                             onUpload={(res: { info: { public_id: any; }; }) => {
                                                  console.log("res : ",res.info)
                                                     setWorkEdit((prev) => ({
                                                         ...prev,
