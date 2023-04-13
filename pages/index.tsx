@@ -8,14 +8,14 @@ import ButtonGo from "@/pages/components/ButtonGo";
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
-    const letter1Ref = useRef("letter1");
-    const letter2Ref = useRef("letter2");
-    const letter3Ref = useRef("letter3");
-    const letter4Ref = useRef("letter4");
-    const letter5Ref = useRef("letter5");
-    const letter6Ref = useRef("letter6");
-    const letter7Ref = useRef("letter7");
-    const letter8Ref = useRef("letter8");
+    const letter1Ref = useRef<HTMLSpanElement>(null);
+    const letter2Ref = useRef<HTMLSpanElement>(null);
+    const letter3Ref = useRef<HTMLSpanElement>(null);
+    const letter4Ref = useRef<HTMLSpanElement>(null);
+    const letter5Ref = useRef<HTMLSpanElement>(null);
+    const letter6Ref = useRef<HTMLSpanElement>(null);
+    const letter7Ref = useRef<HTMLSpanElement>(null);
+    const letter8Ref = useRef<HTMLSpanElement>(null);
 
     useEffect(() => {
         const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZあかさたなはまやらわ123456!#&='.split('');
