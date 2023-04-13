@@ -317,6 +317,28 @@ h3 {
     margin-left: -100%;
   }
 }
+@-webkit-keyframes flyingLetters {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(-10px) translateX(20px);
+  }
+  100% {
+    transform: translateY(0) translateX(40px);
+  }
+}
+@keyframes flyingLetters {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(-10px) translateX(20px);
+  }
+  100% {
+    transform: translateY(0) translateX(40px);
+  }
+}
 body {
   background-color: var(--secondary);
   color: var(--primary);
@@ -885,6 +907,19 @@ main {
   border-radius: 2%;
   transition: transform 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
   background-color: transparent !important;
+}
+
+#contact .letters {
+  animation: flyingLetters 2s infinite;
+}
+#contact .letter1 {
+  animation-delay: 0s;
+}
+#contact .letter2 {
+  animation-delay: 0.4s;
+}
+#contact .letter3 {
+  animation-delay: 0.8s;
 }
 
 @tailwind base;

@@ -1,0 +1,17 @@
+#contact{
+  .letters {
+    animation: flyingLetters 2s infinite;
+  }
+
+  .letter1 {
+    animation-delay: 0s;
+  }
+
+  .letter2 {
+    animation-delay: 0.4s;
+  }
+
+  .letter3 {
+    animation-delay: 0.8s;
+  }
+}

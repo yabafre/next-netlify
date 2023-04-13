@@ -70,6 +70,19 @@
     0% { margin-left: 0; }
     100% { margin-left: -100%; }
 }
+// Use mixin for animation keyframes flyingLetters
+@include keyframes(flyingLetters) {
+    0% {
+        transform: translateY(0) translateX(0);
+    }
+    50% {
+        transform: translateY(-10px) translateX(20px);
+    }
+    100% {
+        transform: translateY(0) translateX(40px);
+    }
+}
+
 
 // animation bounce
 $animate-delay    : .3s !default;

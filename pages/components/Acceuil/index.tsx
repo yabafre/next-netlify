@@ -8,7 +8,7 @@ const Acceuil: FC = () => {
     return (
         <>
             <div className="max-w-full flex justify-between items-center p-6">
-                <h3 className="text__into__jop">Contact</h3>
+                <Link className="text__into__jop" href={'/contact'}>Contact</Link>
                 <Link className="text__into__jop" href={'/'}>Home</Link>
                 <div className="flex justify-center items-center">
                     &nbsp;

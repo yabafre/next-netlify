@@ -62,7 +62,7 @@ export default function Works({ work }: Props){
 
                 {message && <p>{message}</p>}
 
-                <section className="w-full px-[5vw] pb-[5vw]">
+                <section className="w-full px-[5vw] pb-[5vw] sm:w-[74vw]">
                     <div className=" text__head__loop flex flex-row justify-center items-center">
                         <span className="text__head">Fullstack Développer! </span>
                         <span className="text__head">Fullstack Développer! </span>
@@ -74,7 +74,7 @@ export default function Works({ work }: Props){
                         <div className="w-full h-full flex flex-col justify-center items-center">
                             <h1 className="text-4xl mb-2.5">Mes travaux</h1>
                         </div>
-                        <div className="mostly-customized-scrollbar contain-cards w-full h-full flex flex-col justify-center items-center gap-2.5">
+                        <div className="mostly-customized-scrollbar contain-cards w-full h-full flex flex-col items-center gap-2.5">
                             {works.map((work) => (
                                 <div key={work._id} className="form__card__works parent-contain">
                                     <span className="card__works coint-1"></span>
