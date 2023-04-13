@@ -1,6 +1,5 @@
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
-import Layout from '@/pages/components/Layout'
 import Head from 'next/head'
 import Script from 'next/script'
 import { SessionProvider } from "next-auth/react"
@@ -10,6 +9,8 @@ import { SessionProvider } from "next-auth/react"
 import localFont from '@next/font/local'
 import {useEffect} from "react";
 import $ from 'jquery';
+// @ts-ignore
+import Layout from "@/pages/components/Layout";
 
 
 // Font files can be colocated inside of `pages`

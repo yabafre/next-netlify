@@ -96,8 +96,6 @@ const Contact: FC = () => {
                     </span>
                 </div>
 
-
-
                         {message &&
                     <div className="right-0 top-[8%] fixed mb-3 inline-flex w-fit items-center rounded-l-lg bg-green-400 px-6 py-5 text-white-500" role="alert">
                     <span className="mr-2">
@@ -124,6 +122,11 @@ const Contact: FC = () => {
                             onChange={handleChange}
                             required
                         />
+                        {error?.name &&
+                            <div className="mb-3 inline-flex w-full items-center rounded bg-red-400 px-1 py-1 text-gray-500" role="alert">
+                                <p id="message" className="courrier-error">{error.name}</p>
+                            </div>
+                        }
                     </div>
                     <div className="mb-4">
                         <label className="block text-white-700 text-sm font-bold mb-2" htmlFor="email">
@@ -138,6 +141,11 @@ const Contact: FC = () => {
                             onChange={handleChange}
                             required
                         />
+                        {error?.email &&
+                            <div className="mb-3 inline-flex w-full items-center rounded bg-red-400 px-1 py-1 text-gray-500" role="alert">
+                                <p id="message" className="courrier-error">{error.email}</p>
+                            </div>
+                        }
                     </div>
                     <div className="mb-4">
                         <label className="block text-white-700 text-sm font-bold mb-2" htmlFor="phone">
@@ -152,6 +160,11 @@ const Contact: FC = () => {
                             onChange={handleChange}
                             required
                         />
+                        {error?.phone &&
+                            <div className="mb-3 inline-flex w-full items-center rounded bg-red-400 px-1 py-1 text-gray-500" role="alert">
+                                <p id="message" className="courrier-error">{error.phone}</p>
+                            </div>
+                        }
                     </div>
                     <div className="mb-4">
                         <label className="block text-white-700 text-sm font-bold mb-2" htmlFor="sujet">
@@ -166,6 +179,11 @@ const Contact: FC = () => {
                             onChange={handleChange}
                             required
                         />
+                        {error?.sujet &&
+                            <div className="mb-3 inline-flex w-full items-center rounded bg-red-400 px-1 py-1 text-gray-500" role="alert">
+                                <p id="message" className="courrier-error">{error.sujet}</p>
+                            </div>
+                        }
                     </div>
 
 
@@ -181,6 +199,11 @@ const Contact: FC = () => {
                             onChange={(e) => {handleChange(e); Textarea(e);}}
                             required
                         />
+                        {error?.message &&
+                            <div className="mb-3 inline-flex w-full items-center rounded bg-red-400 px-1 py-1 text-gray-500" role="alert">
+                                <p id="message" className="courrier-error">{error.message}</p>
+                            </div>
+                        }
                     </div>
                     <div className="flex items-center justify-between">
                         <button
@@ -192,8 +215,6 @@ const Contact: FC = () => {
                     </div>
                 </form>
             </div>
-
-
         </>
     )
 }

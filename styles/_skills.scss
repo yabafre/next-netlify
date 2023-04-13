@@ -164,6 +164,9 @@
 .btn__go{
   @include button-base(auto,54px);
 }
+.btn__return{
+  @include button-return;
+}
 // button switch theme
 .button__form__switch{
   position: relative;

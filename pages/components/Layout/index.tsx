@@ -29,7 +29,7 @@ const Layout: FC<Props> = ({ children }) => {
             <span className="text__head">Fullstack Développer! </span>
         </div>
             {children}
-        <footer className="footer max-w-full sm:flex justify-between sm:items-center">
+        <footer className="footer max-w-full sm:flex justify-between sm:items-center mb-[5vh]">
                 <Link className={"text-white-600 hover:text-primary-900 dark:text-white-400 dark:hover:text-primary focus:outline focus:outline-2 focus:rounded-sm focus:outline-primary"} href={`/admin/works`}>Projects</Link>
         </footer>
         <Cursor></Cursor>
