@@ -54,12 +54,12 @@ export default function CreateWork(){
                             <Link href="/admin/works" className="btn__return flex justify-center items-center ">
                                 <img src="/back.svg" alt="Retour" className="w-6 h-6 mr-2"/>
                             </Link>
-                            <h1 className="whitespace-nowrap max-sm:text-6xl text-7xl uppercase font-semibold text-white align-middle flex items-center ">
+                            <h1 className="whitespace-nowrap max-sm:text-6xl text-7xl uppercase font-semibold align-middle flex items-center ">
                                 <span className="title  ">&nbsp;{workLoad.title}&nbsp;</span>
                             </h1>
                         </div>
                     </div>
-                    <div className=" text-white py-8 px-6 lg:px-12 mx-auto">
+                    <div className="py-8 px-6 lg:px-12 mx-auto">
                         <div className="lg:flex lg:flex-row lg:justify-center lg:items-center">
                             {workLoad.coverImage && (
                                 <div className="lg:w-1/3 lg:mr-12 mb-4 lg:mb-0">
@@ -80,7 +80,7 @@ export default function CreateWork(){
                         </div>
                     </div>
 
-                    <div className=" text-white py-8 px-6 lg:px-12 mx-auto">
+                    <div className="py-8 px-6 lg:px-12 mx-auto">
                         <div className="lg:flex lg:flex-row lg:justify-center lg:items-center mx-auto">
                             <div className="lg:w-1/3 lg:mr-12 mb-4 lg:mb-0">
                                 <div className=" rounded-lg shadow-lg p-4">
