@@ -181,6 +181,23 @@
                 transition: $transition-ease .35s;
                 transition-delay: 0s;
             }
+
+            .coint-1 {
+                border-top: 1pt solid $princeton-orange;
+                border-right: 1pt solid $princeton-orange;
+            }
+            .coint-2 {
+                border-top: 1pt solid $princeton-orange;
+                border-left: 1pt solid $princeton-orange;
+            }
+            .coint-3 {
+                border-bottom: 1pt solid $princeton-orange;
+                border-right: 1pt solid $princeton-orange;
+            }
+            .coint-4 {
+                border-bottom: 1pt solid $princeton-orange;
+                border-left: 1pt solid $princeton-orange;
+            }
         }
     }
 }

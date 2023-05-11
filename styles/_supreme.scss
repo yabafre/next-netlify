@@ -39,9 +39,9 @@
 
 @font-face {
   font-family: "Supreme-Variable";
-  src: url("/fonts/Supreme-Variable.woff2") format("woff2"),
-    url("/fonts/Supreme-Variable.woff") format("woff"),
-    url("/fonts/Supreme-Variable.ttf") format("truetype");
+  src: url("./fonts/Supreme-Variable.woff2") format("woff2"),
+    url("./fonts/Supreme-Variable.woff") format("woff"),
+    url("./fonts/Supreme-Variable.ttf") format("truetype");
   font-weight: 100 800;
   font-display: swap;
   font-style: normal;
@@ -60,9 +60,9 @@
 
 @font-face {
   font-family: "Supreme-VariableItalic";
-  src: url("/fonts/Supreme-VariableItalic.woff2") format("woff2"),
-    url("/fonts/Supreme-VariableItalic.woff") format("woff"),
-    url("/fonts/Supreme-VariableItalic.ttf") format("truetype");
+  src: url("./fonts/Supreme-VariableItalic.woff2") format("woff2"),
+    url("./fonts/Supreme-VariableItalic.woff") format("woff"),
+    url("./fonts/Supreme-VariableItalic.ttf") format("truetype");
   font-weight: 100 800;
   font-display: swap;
   font-style: italic;
@@ -70,9 +70,9 @@
 
 @font-face {
   font-family: "Supreme-Thin";
-  src: url("/fonts/Supreme-Thin.woff2") format("woff2"),
-    url("/fonts/Supreme-Thin.woff") format("woff"),
-    url("/fonts/Supreme-Thin.ttf") format("truetype");
+  src: url("./fonts/Supreme-Thin.woff2") format("woff2"),
+    url("./fonts/Supreme-Thin.woff") format("woff"),
+    url("./fonts/Supreme-Thin.ttf") format("truetype");
   font-weight: 100;
   font-display: swap;
   font-style: normal;
@@ -80,9 +80,9 @@
 
 @font-face {
   font-family: "Supreme-ThinItalic";
-  src: url("/fonts/Supreme-ThinItalic.woff2") format("woff2"),
-    url("/fonts/Supreme-ThinItalic.woff") format("woff"),
-    url("/fonts/Supreme-ThinItalic.ttf") format("truetype");
+  src: url("./fonts/Supreme-ThinItalic.woff2") format("woff2"),
+    url("./fonts/Supreme-ThinItalic.woff") format("woff"),
+    url("./fonts/Supreme-ThinItalic.ttf") format("truetype");
   font-weight: 100;
   font-display: swap;
   font-style: italic;
@@ -90,9 +90,9 @@
 
 @font-face {
   font-family: "Supreme-Extralight";
-  src: url("/fonts/Supreme-Extralight.woff2") format("woff2"),
-    url("/fonts/Supreme-Extralight.woff") format("woff"),
-    url("/fonts/Supreme-Extralight.ttf") format("truetype");
+  src: url("./fonts/Supreme-Extralight.woff2") format("woff2"),
+    url("./fonts/Supreme-Extralight.woff") format("woff"),
+    url("./fonts/Supreme-Extralight.ttf") format("truetype");
   font-weight: 200;
   font-display: swap;
   font-style: normal;
@@ -100,9 +100,9 @@
 
 @font-face {
   font-family: "Supreme-ExtralightItalic";
-  src: url("/fonts/Supreme-ExtralightItalic.woff2") format("woff2"),
-    url("/fonts/Supreme-ExtralightItalic.woff") format("woff"),
-    url("/fonts/Supreme-ExtralightItalic.ttf") format("truetype");
+  src: url("./fonts/Supreme-ExtralightItalic.woff2") format("woff2"),
+    url("./fonts/Supreme-ExtralightItalic.woff") format("woff"),
+    url("./fonts/Supreme-ExtralightItalic.ttf") format("truetype");
   font-weight: 200;
   font-display: swap;
   font-style: italic;
@@ -110,9 +110,9 @@
 
 @font-face {
   font-family: "Supreme-Light";
-  src: url("/fonts/Supreme-Light.woff2") format("woff2"),
-    url("/fonts/Supreme-Light.woff") format("woff"),
-    url("/fonts/Supreme-Light.ttf") format("truetype");
+  src: url("./fonts/Supreme-Light.woff2") format("woff2"),
+    url("./fonts/Supreme-Light.woff") format("woff"),
+    url("./fonts/Supreme-Light.ttf") format("truetype");
   font-weight: 300;
   font-display: swap;
   font-style: normal;
@@ -120,9 +120,9 @@
 
 @font-face {
   font-family: "Supreme-LightItalic";
-  src: url("/fonts/Supreme-LightItalic.woff2") format("woff2"),
-    url("/fonts/Supreme-LightItalic.woff") format("woff"),
-    url("/fonts/Supreme-LightItalic.ttf") format("truetype");
+  src: url("./fonts/Supreme-LightItalic.woff2") format("woff2"),
+    url("./fonts/Supreme-LightItalic.woff") format("woff"),
+    url("./fonts/Supreme-LightItalic.ttf") format("truetype");
   font-weight: 300;
   font-display: swap;
   font-style: italic;
@@ -130,9 +130,9 @@
 
 @font-face {
   font-family: "Supreme-Regular";
-  src: url("/fonts/Supreme-Regular.woff2") format("woff2"),
-    url("/fonts/Supreme-Regular.woff") format("woff"),
-    url("/fonts/Supreme-Regular.ttf") format("truetype");
+  src: url("./fonts/Supreme-Regular.woff2") format("woff2"),
+    url("./fonts/Supreme-Regular.woff") format("woff"),
+    url("./fonts/Supreme-Regular.ttf") format("truetype");
   font-weight: 400;
   font-display: swap;
   font-style: normal;
@@ -140,9 +140,9 @@
 
 @font-face {
   font-family: "Supreme-Italic";
-  src: url("/fonts/Supreme-Italic.woff2") format("woff2"),
-    url("/fonts/Supreme-Italic.woff") format("woff"),
-    url("/fonts/Supreme-Italic.ttf") format("truetype");
+  src: url("./fonts/Supreme-Italic.woff2") format("woff2"),
+    url("./fonts/Supreme-Italic.woff") format("woff"),
+    url("./fonts/Supreme-Italic.ttf") format("truetype");
   font-weight: 400;
   font-display: swap;
   font-style: italic;
@@ -150,9 +150,9 @@
 
 @font-face {
   font-family: "Supreme-Medium";
-  src: url("/fonts/Supreme-Medium.woff2") format("woff2"),
-    url("/fonts/Supreme-Medium.woff") format("woff"),
-    url("/fonts/Supreme-Medium.ttf") format("truetype");
+  src: url("./fonts/Supreme-Medium.woff2") format("woff2"),
+    url("./fonts/Supreme-Medium.woff") format("woff"),
+    url("./fonts/Supreme-Medium.ttf") format("truetype");
   font-weight: 500;
   font-display: swap;
   font-style: normal;
@@ -160,9 +160,9 @@
 
 @font-face {
   font-family: "Supreme-MediumItalic";
-  src: url("/fonts/Supreme-MediumItalic.woff2") format("woff2"),
-    url("/fonts/Supreme-MediumItalic.woff") format("woff"),
-    url("/fonts/Supreme-MediumItalic.ttf") format("truetype");
+  src: url("./fonts/Supreme-MediumItalic.woff2") format("woff2"),
+    url("./fonts/Supreme-MediumItalic.woff") format("woff"),
+    url("./fonts/Supreme-MediumItalic.ttf") format("truetype");
   font-weight: 500;
   font-display: swap;
   font-style: italic;
@@ -170,9 +170,9 @@
 
 @font-face {
   font-family: "Supreme-Bold";
-  src: url("/fonts/Supreme-Bold.woff2") format("woff2"),
-    url("/fonts/Supreme-Bold.woff") format("woff"),
-    url("/fonts/Supreme-Bold.ttf") format("truetype");
+  src: url("./fonts/Supreme-Bold.woff2") format("woff2"),
+    url("./fonts/Supreme-Bold.woff") format("woff"),
+    url("./fonts/Supreme-Bold.ttf") format("truetype");
   font-weight: 700;
   font-display: swap;
   font-style: normal;
@@ -180,9 +180,9 @@
 
 @font-face {
   font-family: "Supreme-BoldItalic";
-  src: url("/fonts/Supreme-BoldItalic.woff2") format("woff2"),
-    url("/fonts/Supreme-BoldItalic.woff") format("woff"),
-    url("/fonts/Supreme-BoldItalic.ttf") format("truetype");
+  src: url("./fonts/Supreme-BoldItalic.woff2") format("woff2"),
+    url("./fonts/Supreme-BoldItalic.woff") format("woff"),
+    url("./fonts/Supreme-BoldItalic.ttf") format("truetype");
   font-weight: 700;
   font-display: swap;
   font-style: italic;
@@ -190,9 +190,9 @@
 
 @font-face {
   font-family: "Supreme-Extrabold";
-  src: url("/fonts/Supreme-Extrabold.woff2") format("woff2"),
-    url("/fonts/Supreme-Extrabold.woff") format("woff"),
-    url("/fonts/Supreme-Extrabold.ttf") format("truetype");
+  src: url("./fonts/Supreme-Extrabold.woff2") format("woff2"),
+    url("./fonts/Supreme-Extrabold.woff") format("woff"),
+    url("./fonts/Supreme-Extrabold.ttf") format("truetype");
   font-weight: 800;
   font-display: swap;
   font-style: normal;
@@ -200,9 +200,9 @@
 
 @font-face {
   font-family: "Supreme-ExtraboldItalic";
-  src: url("/fonts/Supreme-ExtraboldItalic.woff2") format("woff2"),
-    url("/fonts/Supreme-ExtraboldItalic.woff") format("woff"),
-    url("/fonts/Supreme-ExtraboldItalic.ttf") format("truetype");
+  src: url("./fonts/Supreme-ExtraboldItalic.woff2") format("woff2"),
+    url("./fonts/Supreme-ExtraboldItalic.woff") format("woff"),
+    url("./fonts/Supreme-ExtraboldItalic.ttf") format("truetype");
   font-weight: 800;
   font-display: swap;
   font-style: italic;
